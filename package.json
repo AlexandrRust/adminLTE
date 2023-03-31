@@ -2,7 +2,7 @@
   "name": "admin-lte-3",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://alexandrrust.github.io/admin-lte-3/",
+  "homepage": "https://alexandrrust.github.io/adminLTE/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
