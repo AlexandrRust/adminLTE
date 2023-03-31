@@ -2,22 +2,49 @@ import LogoBox from "../logo/LogoBox";
 import { NavBarBox } from "./common/NavBarBox.styled";
 import { NavBarWrapper } from "./common/NavBarWrapper.styled";
 import Menu from "../menu/Menu";
+import { useEffect, useState } from "react";
 
 const NavBar = ({ isOpen }) => {
+  const [widthNavBar, setWidthNavBar] = useState("");
+  const bigNavBar = "250px";
+  const smallNavBar = "4.6rem";
+
+  useEffect(() => {
+    if (isOpen) {
+      setWidthNavBar(bigNavBar);
+    } else {
+      setWidthNavBar(smallNavBar);
+    }
+  }, [isOpen]);
+  const onMouseEnter = () => {
+    setWidthNavBar(bigNavBar);
+  };
+  const onMouseLeave = () => {
+    if (isOpen) {
+      return;
+    } else {
+      setWidthNavBar(smallNavBar);
+    }
+  };
+
   return (
-    <NavBarWrapper style={isOpen ? { width: "20%" } : { width: "6.5%" }}>
+    <NavBarWrapper
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+      width={widthNavBar}
+    >
       <NavBarBox>
-        <LogoBox isOpen={isOpen} />
+        <LogoBox isOpen={widthNavBar} bigNavBar={bigNavBar} />
       </NavBarBox>
       <NavBarBox>
-        {isOpen && (
+        {widthNavBar === bigNavBar && (
           <ul>
             <li>admin</li>
             <li>admin</li>
           </ul>
         )}
       </NavBarBox>
-      {isOpen && <Menu />}
+      {widthNavBar === bigNavBar && <Menu />}
     </NavBarWrapper>
   );
 };

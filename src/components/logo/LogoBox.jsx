@@ -1,7 +1,7 @@
 import { Logo } from "./common/Logo.styled";
 import { LogoBoxStyle } from "./common/LogoWrapper.styled";
 
-const LogoBox = ({ isOpen }) => {
+const LogoBox = ({ isOpen, bigNavBar }) => {
   return (
     <LogoBoxStyle>
       <Logo to={"/"}>
@@ -11,7 +11,11 @@ const LogoBox = ({ isOpen }) => {
           height={33}
         />
         <h3
-          style={isOpen ? { width: "180px", opacity: "1" } : { opacity: "0" }}
+          style={
+            isOpen === bigNavBar
+              ? { width: "180px", opacity: "1" }
+              : { opacity: "0" }
+          }
         >
           AdminLTE 3
         </h3>
