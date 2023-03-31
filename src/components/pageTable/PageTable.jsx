@@ -15,8 +15,8 @@ const PageTable = () => {
           </TableTh>
           <TableTh>
             Назва
-            <FiArrowUp />
-            <FiArrowDown />
+            <FiArrowUp style={{ float: "right" }} />
+            <FiArrowDown style={{ float: "right" }} />
           </TableTh>
           <TableTh>
             Псевдонім

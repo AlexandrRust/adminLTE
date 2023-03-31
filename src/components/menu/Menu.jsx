@@ -11,8 +11,10 @@ const Menu = () => {
     const classList = e.currentTarget.classList.value.split(" ");
     if (classList.find((el) => el === "close")) {
       e.currentTarget.classList.remove("close");
+      e.currentTarget.firstChild.children[0].style.rotate = "-90deg";
     } else {
       e.currentTarget.classList.add("close");
+      e.currentTarget.firstChild.children[0].style.rotate = "0deg";
     }
   };
   return (
