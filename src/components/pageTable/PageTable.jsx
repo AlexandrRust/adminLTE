@@ -1,7 +1,6 @@
 import { PageTableStyle } from "./common/PageTableStyle.styled";
 import { TableTh } from "./common/TableTh.style";
 import { FiArrowUp, FiArrowDown } from "react-icons/fi";
-import { TableIconBox } from "./common/TableIconBox.style";
 import { TableTd } from "./common/TableTd.style";
 
 const PageTable = () => {
@@ -11,10 +10,8 @@ const PageTable = () => {
         <tr>
           <TableTh>
             ID
-            {/* <TableIconBox> */}
             <FiArrowUp style={{ marginLeft: "20px" }} />
             <FiArrowDown />
-            {/* </TableIconBox> */}
           </TableTh>
           <TableTh>
             Назва
