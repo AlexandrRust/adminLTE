@@ -1,28 +1,29 @@
-import { Link } from "react-router-dom";
+
+import CreateMenusForm from "../components/createMenusForm/CreateMenusForm";
 import { PageContentBox } from "../components/pageContentBox/PageContentBox.styled";
 import { PageHeader } from "../components/pageHeader/PageHeader.styled";
-import PageNav from "../components/pageNav/PageNav";
-import PageTable from "../components/pageTable/PageTable";
 import { PageTitle } from "../components/pageTitle/PageTtitle.styled";
 import { Section } from "../components/section/Section.styled";
 import theme from "../theme/theme";
 
-const News = () => {
-  return (
-    <PageContentBox>
+const CreateMenus = () => {
+    
+    return (
+      <PageContentBox>
       <Section>
         <PageHeader>
-          <PageTitle>Title News Index</PageTitle>
-          <Link style={theme.btn.btnGreen} to="/menus/create">
+          <PageTitle>Menus</PageTitle>
+          <button style={theme.btn.btnGreen} form="menusForm" type="submit">
             Створити
-          </Link>
+          </button>
         </PageHeader>
       </Section>
       <Section>
-        <PageNav />
-        <PageTable />
+        <CreateMenusForm />
       </Section>
     </PageContentBox>
-  );
-};
-export default News;
+     
+      )
+}
+
+export default CreateMenus

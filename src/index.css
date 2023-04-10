@@ -5,6 +5,7 @@ body {
     "Segoe UI Emoji", "Segoe UI Symbol";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
 code {
@@ -20,13 +21,22 @@ ul {
   height: 40px;
   overflow: hidden;
 }
+.active {
+  background-color: #fff;
+  color: black;
+}
+.no-active {
+  color: #fff;
+}
 
-@keyframes ScaleAnime {
-  0% {
-    transform: scale(0.5);
-  }
+@keyframes pageAnime {
+	0% {
+		opacity: 0;
+		transform: translateX(250px);
+	}
 
-  100% {
-    transform: scale(1);
-  }
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
 }

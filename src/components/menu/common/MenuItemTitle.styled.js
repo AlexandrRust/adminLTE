@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const MenuItemTitle = styled.p`
+export const MenuItemTitle = styled.h4`
   margin: 0;
   padding: 6px 10px;
   font-size: 1rem;

@@ -4,8 +4,8 @@ export const FooterStyle = styled.footer`
   display: block;
   width: 100%;
   height: 40px;
-  position: absolute;
-  bottom: 0;
+  /* position: absolute; */
+  /* bottom: 0; */
   background-color: #fff;
   border-top: 1px solid #dee2e6;
   font-size: 1rem;

@@ -4,14 +4,14 @@ const Footer = () => {
   return (
     <FooterStyle>
       <p style={{ marginLeft: "8px" }}>
-        Copyright © 2011-2022{" "}
+        Copyright © 2011-2022
         <a
           href="http://lockIt.com.ua"
           style={{ textDecoration: "none", color: "#007bff" }}
         >
-          {" "}
+
           LockIt.com.ua.
-        </a>{" "}
+        </a>
         All rights reserved.
       </p>
       <p style={{ marginRight: "8px" }}>

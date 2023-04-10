@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const MenuStyle = styled.ul`
+export const MenuStyle = styled.div`
   padding: 15px 10px 0px 10px;
   gap: 5px;
   margin: 0;

@@ -16,7 +16,7 @@ const SharedLayout = () => {
     <div style={{ display: "flex" }}>
       <NavBar openNavBar={openCloseNavBar} isOpen={isOpen} />
       <Container>
-        <Header openNavBar={openCloseNavBar} />
+        <Header openNavBar={openCloseNavBar} isOpen={isOpen}/>
         <Suspense fallback={<div>Loading page...</div>}>
           <Outlet />
         </Suspense>
